@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jordirolli/snapterest/issues"
   },
-  "homepage": "https://github.com/jordirolli/snapterest"
+  "homepage": "https://github.com/jordirolli/snapterest",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
