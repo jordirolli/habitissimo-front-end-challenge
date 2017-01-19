@@ -1,0 +1,11 @@
+# Idea IntelliJ project
+.idea
+
+# Node modules directori. Run npm install instead.
+node_modules
+
+# Log files. Like npm-debug.log
+*.log
+
+# Personal use
+todo.txt
