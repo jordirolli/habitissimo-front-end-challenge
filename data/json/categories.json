@@ -1,0 +1,52 @@
+[
+  {
+    "name": "construcción",
+    "slug": "construccion",
+    "children": [
+      {
+        "name": "construcción casas",
+        "slug": "construccion-casas"
+      },
+      {
+        "name": "construcción edificios",
+        "slug": "construccion-edificios"
+      },
+      {
+        "name": "construcción piscinas",
+        "slug": "construccion-piscinas"
+      }
+    ]
+  },
+  {
+    "name": "reformas",
+    "slug": "reformas",
+    "children": [
+      {
+        "name": "reforma baños",
+        "slug": "reforma-banos"
+      },
+      {
+        "name": "reforma cocinas",
+        "slug": "reforma-cocinas"
+      },
+      {
+        "name": "reforma integral",
+        "slug": "reforma-integral"
+      }
+    ]
+  },
+  {
+    "name": "instaladores",
+    "slug": "instaladores",
+    "children": [
+      {
+        "name": "calefacción",
+        "slug": "calefaccion"
+      },
+      {
+        "name": "aire acondicionado",
+        "slug": "aire-acondicionado"
+      }
+    ]
+  }
+]

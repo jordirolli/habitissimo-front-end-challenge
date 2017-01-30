@@ -1,0 +1,155 @@
+@import 'constants';
+
+/* multi step form colour scheme */
+$form-border-color: #979797;
+$form-header-color: #FFF;
+$form-header-background-color: #404040;
+$form-header-small-background-color: #FF7300;
+$form-content-background-color: #FFF;
+$form-progressbar-primary-color: $form-header-small-background-color;
+$form-progressbar-secondary-color-active: #FFF;
+$form-progressbar-secondary-color-non-active: form-header-background-color;
+$form-field-color: 2B2B2B;
+
+/* progress bar */
+$amount-steps: 3;
+$step-width: 100%/$amount-steps;
+$progress-bar-font-size: 15px;
+
+/* fields */
+$form-field-font-size: $progress-bar-font-size;
+$form-fieldset-min-height: 200px;
+$form-field-margin-top: 10px;
+
+input.has-error {
+  box-shadow: 0 0 5px 1px red;
+}
+
+
+#multi-step-form {
+
+	border: 1px solid $form-border-color;
+
+    header {
+
+        h2 {
+
+            background-color: $form-header-background-color;
+            color: $form-header-color;
+            padding: 0 0 0 $text-medium-size;
+            line-height: 50px;
+            margin: 0;
+
+            em {
+                font-style: inherit;
+                font-weight: $text-medium-weight;
+            }
+
+            small {
+                display: block;
+                background: $form-header-small-background-color;
+                color: $form-header-color;
+                float: right;
+                font-size: inherit;
+                line-height: inherit;
+                padding: 0 $text-medium-size;
+            }
+        }
+    }
+
+    ul#progressbar {
+
+        overflow: hidden;
+        /*CSS counters to number the steps*/
+        counter-reset: step;
+        border-bottom: 1px solid $form-border-color;
+
+        li {
+        	list-style-type: none;
+        	background: $form-content-background-color;
+        	color: form-header-color;
+        	font-size: 13px;
+        	width: $step-width;
+        	float: left;
+        	position: relative;
+
+        	&:before {
+            	content: counter(step);
+            	counter-increment: step;
+            	width: $progress-bar-font-size * 2;
+            	line-height: $progress-bar-font-size * 2;
+            	display: inline-block;
+            	font-size: $progress-bar-font-size;
+
+            	text-align: center;
+            	color: $form-progressbar-secondary-color-non-active;
+            	border-radius: $progress-bar-font-size;
+            	border: 2px solid $form-progressbar-primary-color;
+            	margin: 5px;
+            }
+
+            &:after {
+            	content: '';
+            	width: 100%;
+            }
+        }
+
+        li.active{
+
+             &:before {
+                 content: counter(step);
+                 counter-increment: step;
+                 width: $progress-bar-font-size * 2;
+                 line-height: $progress-bar-font-size * 2;
+                 display: inline-block;
+                 font-size: $progress-bar-font-size;
+                 border-radius: $progress-bar-font-size;
+                 margin: 5px;
+                 text-align: center;
+                 color: $form-progressbar-secondary-color-active;
+                 background-color: $form-progressbar-primary-color;
+             }
+        }
+    }
+
+    fieldset {
+    	background: $form-content-background-color;
+    	min-height: $form-fieldset-min-height;
+        display: none;
+
+        div.form-field {
+            float: left;
+            width: 100%;
+            margin-top: $form-field-margin-top;
+
+            label {
+                display: inline-block;
+                max-width: 100%;
+                margin-bottom: 5px;
+                font-size: $form-field-font-size;
+                color: $form-field-color;
+                font-weight: 400;
+                letter-spacing: 0;
+            }
+
+            div.form-input {
+                margin-top: $form-field-margin-top;
+            }
+        }
+    }
+
+    div#congratulations {
+        display:none;
+        min-height: $form-fieldset-min-height;
+    }
+
+    div#controls {
+        text-align: center;
+        position: relative;
+        padding: $form-field-margin-top 0 $form-field-margin-top;
+        display:inline-block;
+        width: 100%;
+    }
+}
+
+

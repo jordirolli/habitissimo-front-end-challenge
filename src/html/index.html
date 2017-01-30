@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>Habitissimo - Front end challenge</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="title" content="Habitissimo - Front end challenge">
+    <meta name="description" content="This is the delivery for the front end challenge as part of habitissimo recruitment process.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="stylesheet" type="text/css" href="habitissimo.css">-->
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container-fluid gray-container">
+    <div class="container">
+        <div id="ql-reasons" class="col-lg-5 col-md-5 col-xs-12">
+
+        </div>
+        <div id="ql-quotation-request" class="col-lg-7 col-md-7 col-xs-12">
+            <!-- multistep form -->
+            <form id="multi-step-form" method="post">
+                <header>
+                    <h2 class="t-m text-semibold">
+                        Solicita presupuestos              <em>en 1 minuto</em>
+                        <small>¡Es gratis!</small>
+                    </h2>
+                </header>
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li>Tu solicitud</li>
+                    <li>Detalles</li>
+                    <li>Tus datos</li>
+                </ul>
+
+                <div id="steps">
+                    <!-- fieldsets -->
+                    <fieldset id="step-1" class="col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label" for="description">¿Qué necesitas?</label>
+                            <div class="form-input">
+                                <textarea id="description" class="form-control" name="description" placeholder="Descripción del trabajo a realizar" cols="60" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="estimated-date">¿Cuándo quieres realizar el trabajo?</label>
+                            <div class="form-input">
+                                <select id="estimated-date" class="form-control" name="estimated-date">
+                                    <option value="">Seleccionar</option>
+                                    <option value="soon">Lo antes posible</option>
+                                    <option value="less-than-3-months">de 1 a 3 meses</option>
+                                    <option value="more-than-3-months">más de 3 meses</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="step-2" class="col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label" for="category">Categoría</label>
+                            <div class="form-input">
+                                <select id="category" class="form-control" name="category">
+                                    <option value="">Seleccionar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="subcategory">Subcategoria</label>
+                            <div class="form-input">
+                                <select id="subcategory" class="form-control" name="subcategory">
+                                    <option value="">Primero debe sellecionar una categoría</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="price-preference">¿Que tipo de precio te ineteresa más?</label>
+                            <div class="form-input">
+                                <select id="price-preference" name="price-preference" class="form-control" >
+                                    <option value="">Seleccionar</option>
+                                    <option value="cheap">Lo más barato</option>
+                                    <option value="value">Relación calidad precio</option>
+                                    <option value="quality">Mejor calidad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset id="step-3" class="col-xs-12">
+                        <div class="form-group">
+                            <label class="control-label" for="name">Nombre</label>
+                            <div class="form-input">
+                                <input type="text" id="name" class="form-control" name="name" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">Email</label>
+                            <div class="form-input">
+                                <input type="email" id="email" class="form-control" name="email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Teléfono</label>
+                            <div class="form-input">
+                                <input type="tel" id="phone" class="form-control" name="phone" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="congratulations" class="col-xs-12">
+                    <h2>Presupuesto recibido</h2>
+                </div>
+                <div id="controls">
+                    <input type="button" id="previous" name="previous" class="btn my-btn" value="Anterior" />
+                    <input type="button" id="next" name="next" class="btn my-btn" value="Siguiente" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="habitissimo.js"></script>
+</body>
+</html>

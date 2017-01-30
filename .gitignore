@@ -7,5 +7,5 @@ node_modules
 # Log files. Like npm-debug.log
 *.log
 
-# Personal use
-todo.txt
+# Dist folder
+dist

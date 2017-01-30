@@ -1,0 +1,10 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+/* bootstrap overrides */
+
+$form-header-small-background-color: #FF7300;
+
+.my-btn {
+  //@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  @include button-variant(white, $form-header-small-background-color, white);
+}
